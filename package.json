@@ -25,7 +25,7 @@
     "dashboardPanels": [
       {
         "name": "panel",
-        "title": "Panel",
+        "title": "Music Playlist",
         "width": 2,
         "file": "panel.html",
         "headerColor": "#278178"
