@@ -1,0 +1,113 @@
+{
+  "name": "nodecg-foobar2000-controller",
+  "version": "0.0.0",
+  "description": "NodeCG bundle for controlling foobar2000 using beefweb",
+  "homepage": "",
+  "author": {
+    "name": "mbcsalmeida",
+    "email": "mbcsalmeida@gmail.com",
+    "url": ""
+  },
+  "files": [
+    "dashboard",
+    "graphics",
+    "extension.js",
+    "extension"
+  ],
+  "keywords": [
+    "foobar2000",
+    "web",
+    "music",
+    "nodecg-bundle"
+  ],
+  "nodecg": {
+    "compatibleRange": "^2.0.0",
+    "dashboardPanels": [
+      {
+        "name": "panel",
+        "title": "Panel",
+        "width": 2,
+        "file": "panel.html",
+        "headerColor": "#278178"
+      }
+    ],
+    "graphics": [
+      {
+        "file": "music.html",
+        "width": 800,
+        "height": 200
+      }
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "scripts": {
+    "autofix": "run-s autofix:*",
+    "autofix:browser": "eslint --fix --ext .ts,.tsx src/browser",
+    "autofix:extension": "eslint --fix --ext .ts src/extension && eslint --fix --ext .d.ts src/nodecg",
+    "build": "run-s clean build:*",
+    "build:browser": "vite build",
+    "build:extension": "tsc -b tsconfig.extension.json",
+    "clean": "trash node_modules/.cache && trash shared/dist && trash dashboard && trash graphics && trash extension",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "prettify": "prettier --write src/browser src/extension",
+    "prebuild": "npm run clean",
+    "schema-types": "nodecg schema-types -o src/types/generated",
+    "start": "node ../..",
+    "watch": "run-p watch:*",
+    "watch:browser": "vite",
+    "watch:extension": "tsc -b tsconfig.extension.json -w --preserveWatchOutput"
+  },
+  "dependencies": {
+    "@fontsource/roboto": "^5.0.3",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.13.4",
+    "@nodecg/react-hooks": "^1.0.3",
+    "nodecg": "^2.5.3",
+    "react": "*",
+    "react-dom": "*",
+    "ts-node": "*"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.12.0",
+    "@nodecg/types": "^2.1.8",
+    "@types/eslint__js": "^8.42.3",
+    "@types/lodash": "^4.14.195",
+    "@types/react": "^18.0.37",
+    "@types/react-dom": "^18.0.11",
+    "@typescript-eslint/eslint-plugin": "^8.8.0",
+    "@typescript-eslint/parser": "^8.8.0",
+    "@vitejs/plugin-react": "^4.3.2",
+    "cheerio": "1.0.0-rc.12",
+    "del": "^7.0.0",
+    "del-cli": "^5.0.0",
+    "eslint": "^9.12.0",
+    "eslint-plugin-react": "^7.37.1",
+    "eslint-plugin-react-hooks": "^5.1.0-rc-eb3ad065-20240822",
+    "eslint-plugin-react-refresh": "^0.4.12",
+    "get-port": "^7.0.0",
+    "globals": "^15.10.0",
+    "globby": "^13.1.4",
+    "nodecg-cli": "^8.6.6",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.8.8",
+    "rollup": "^3.25.1",
+    "trash-cli": "^5.0.0",
+    "typescript": "^5.6.2",
+    "typescript-eslint": "^8.8.0",
+    "vite": "^5.4.8",
+    "vite-plugin-checker": "^0.8.0"
+  },
+  "repository": "https://github.com/mbcsalmeida/nodecg-foobar2000-controller.git",
+  "license": "Apache-2.0"
+}
