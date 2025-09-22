@@ -10,7 +10,7 @@ const App = () => {
 
   return (
     <div className='song-container'>
-      <img className={`song-icon ${icon ? "show" : ""}`} src={musicIcon} alt='Music' />
+      <img className={`song-icon ${icon ? "show" : ""} fill-black`} src={musicIcon} alt='Music' />
       <div className='song-title'>
 					{data && !data.error && (
 				<>
