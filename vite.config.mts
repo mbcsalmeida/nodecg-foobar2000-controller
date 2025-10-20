@@ -9,7 +9,7 @@ export default defineConfig({
     react(),
     checker({ typescript: { tsconfigPath: './tsconfig.browser.json' } }),
     nodecg({
-      bundleName: 'nodecg-foobar2000-controlle',
+      bundleName: 'nodecg-foobar2000-controller',
       graphics: './src/browser/graphics/*.tsx',
       dashboard: './src/browser/dashboard/*.tsx',
     }),
