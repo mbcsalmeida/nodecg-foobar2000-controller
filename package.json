@@ -36,6 +36,11 @@
         "file": "music.html",
         "width": 800,
         "height": 200
+      },
+      {
+        "file": "title.html",
+        "width": 800,
+        "height": 200
       }
     ]
   },
@@ -69,9 +74,11 @@
     "watch:extension": "tsc -b tsconfig.extension.json -w --preserveWatchOutput"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
     "@fontsource/roboto": "^5.0.3",
     "@mui/icons-material": "^5.11.16",
-    "@mui/material": "^5.13.4",
+    "@mui/material": "^5.18.0",
     "@nodecg/react-hooks": "^1.0.3",
     "nodecg": "^2.5.3",
     "react": "*",
