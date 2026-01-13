@@ -1,11 +1,5 @@
 import { useReplicant } from '@nodecg/react-hooks';
-
-type NowPlaying = {
-	album: string;
-	title: string;
-	error: string | null;
-	lastUpdated: number;
-};
+import { NowPlaying } from 'src/types/nowPlaying';
 
 function usePlayer() {
   const [nowPlaying] = useReplicant<NowPlaying>('nowPlaying');
