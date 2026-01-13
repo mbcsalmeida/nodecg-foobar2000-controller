@@ -36,16 +36,6 @@
         "file": "music.html",
         "width": 800,
         "height": 100
-      },
-      {
-        "file": "title.html",
-        "width": 800,
-        "height": 100
-      },
-      {
-        "file": "album.html",
-        "width": 800,
-        "height": 100
       }
     ]
   },
@@ -73,7 +63,7 @@
     "prettify": "prettier --write src/browser src/extension",
     "prebuild": "npm run clean",
     "schema-types": "nodecg schema-types -o src/types/generated",
-    "start": "node ../..",
+    "start": "nodecg start",
     "watch": "run-p watch:*",
     "watch:browser": "vite",
     "watch:extension": "tsc -b tsconfig.extension.json -w --preserveWatchOutput"
